@@ -19,7 +19,7 @@ In the meantime, below is an example of what you can do with just a few lines of
 with st.echo(code_location='below'):
     st.text_input('Project Name')
     st.radio('Units', ['SI','English'])
-    st.number_input('Print transient conditions every __ seconds')
+    st.number_input('Print transient conditions every __ seconds', minvalue=0, step=1)
 
     
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
