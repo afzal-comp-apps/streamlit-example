@@ -23,8 +23,8 @@ with st.echo(code_location='below'):
     NODE = st.number_input('Number of nodes', min_value=0, step=1, max_value=20)
     
     for curr_node in range(NODE):
-        NTYP(curr_node) = st.radio('Node type', ['Pump failure','Francis turbine'])
-        NDEV(curr_node) = st.number_input('Device number', min_value=0)
+        NTYP[curr_node] = st.radio('Node type', ['Pump failure','Francis turbine'])
+        NDEV[curr_node] = st.number_input('Device number', min_value=0)
 
     
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
